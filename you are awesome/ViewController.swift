@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(" 😎lädt auch")
     }
 
 
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+        print("😎 button funktioniert")
+    }
 }
 
