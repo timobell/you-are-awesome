@@ -13,13 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(" 😎lädt auch")
-        messageLabel.text = "bist du es"
+        messageLabel.text = "bist du es?"
     }
 
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         print("😎 button funktioniert")
-        messageLabel.text = "du bist super"
+        messageLabel.text = "du bist super?"
     }
     @IBAction func messegeButtonClosed(_ sender: UIButton) {
         messageLabel.text = "komm drück jetzt \"nein\"!!!"
