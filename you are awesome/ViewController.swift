@@ -10,22 +10,23 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(" 😎lädt auch")
-        messageLabel.text = "bist du es?"
+        imageView.image = .init(named: "image1")
     }
 
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        print("😎 button funktioniert")
-        messageLabel.text = "du bist super?"
+        messageLabel.text = "du bist super"
+        imageView.image = .init(named: "image3")
     }
     @IBAction func messegeButtonClosed(_ sender: UIButton) {
-        messageLabel.text = "komm drück jetzt \"nein\"!!!"
+        imageView.image = .init(named: "image2")
     }
     @IBAction func neinButton(_ sender: UIButton) {
-        messageLabel.text = "ja jetzt hast du es verstanden"
+        imageView.image = UIImage.init(named: "image0")
     }
     
     
