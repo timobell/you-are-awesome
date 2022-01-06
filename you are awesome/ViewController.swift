@@ -14,19 +14,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = .init(named: "image1")
+        imageView.image = UIImage(named: "image1")
+        messageLabel.text = ""
     }
 
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         messageLabel.text = "du bist super"
-        imageView.image = .init(named: "image3")
+        imageView.image = UIImage(named: "image3")
     }
     @IBAction func messegeButtonClosed(_ sender: UIButton) {
-        imageView.image = .init(named: "image2")
+        imageView.image = UIImage(named: "image2")
     }
     @IBAction func neinButton(_ sender: UIButton) {
-        imageView.image = UIImage.init(named: "image0")
+        imageView.image = UIImage(named: "image0")
     }
     
     
