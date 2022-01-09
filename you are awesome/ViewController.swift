@@ -8,9 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var imageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +23,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
+            print(imageNumber)
+            imageView.image = UIImage(named: "image" + String(imageNumber))
+            imageNumber = imageNumber + 1
+        if imageNumber == 10{
+            imageNumber = 0
+        }
         messageLabel.text = "du bist super"
-        imageView.image = UIImage(named: "image3")
     }
-    @IBAction func messegeButtonClosed(_ sender: UIButton) {
-        imageView.image = UIImage(named: "image2")
-    }
-    @IBAction func neinButton(_ sender: UIButton) {
-        imageView.image = UIImage(named: "image0")
-    }
-    
-    
 }
 
