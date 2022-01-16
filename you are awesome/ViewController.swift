@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var messageNumber = 0
     var imageNumber = 0
+    var message = ["a", "b", "c", "d", "e", "f", "g", "h", "i","lol"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +25,18 @@ class ViewController: UIViewController {
 
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
+            messageLabel.text = message[messageNumber]
             print(imageNumber)
             imageView.image = UIImage(named: "image" + String(imageNumber))
             imageNumber = imageNumber + 1
+            messageNumber = messageNumber + 1
         if imageNumber == 10{
             imageNumber = 0
         }
-        messageLabel.text = "du bist super"
+        if messageNumber == message.count {
+            messageNumber = 0
+        }
+//        message[0] = "80"
     }
 }
 
